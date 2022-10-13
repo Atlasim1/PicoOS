@@ -2,7 +2,7 @@ import sys
 print("Welcome To Recovery Mode")
 print("Please Choose Action :\n 1 : Reboot\n 2 : Boot Main BIOS\n 3 : Exit To REPL")
 
-while True
+while True:
     SelectedAction = input("Recovery > ")
 
     if SelectedAction == "1":

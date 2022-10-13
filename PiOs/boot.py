@@ -11,7 +11,7 @@ while booted == True:
 
     if selBootAction == "1":
         print("Booting Default Operating System\n")
-        defaultOs = open("/picoos/config/DEFAULT_BOOT_PATH.cfg").read()
+        defaultOs = open("/picoos/config/SYSTEM/boot/DEFAULT_BOOT_PATH.cfg").read()
         booted = False
         exec(open(defaultOs).read())
         
@@ -29,5 +29,5 @@ while booted == True:
         
     elif selBootAction == "4":
         print("Booting More Options")
-        moreOptionsOs = open("/picoos/config/DEFAULT_RECOVERY_PATH.cfg").read()
+        moreOptionsOs = open("/picoos/config/SYSTEM/boot/DEFAULT_RECOVERY_PATH.cfg").read()
         exec(open(moreOptionsOs).read())
