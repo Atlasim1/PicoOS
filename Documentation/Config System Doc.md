@@ -8,9 +8,16 @@ To create a key, Simply Create a `.cfg` file and name it with your key name. The
 ```
 very important string
 ```
+Registry Tree Structure : 
 ```
-69420
-```
-```
-12.4.435
+Registry
+┣ SYSTEM : For system Files
+┃ ┣ boot : Bootloader Related Config
+┃ ┣ setup : setup related config
+┃ ┗ software : System software related config
+┣ SOFTWARE : Software Related Config
+┃ ┗ [softwareNameHere] : Config For Specific Program
+┣ DEVICE : External Devices Related Config
+┣ CLASSES : Classes Related Config
+┗ PROGRAMS : Program List, Installers And Uninstallers
 ```
