@@ -8,4 +8,9 @@ To create a key, Simply Create a `.cfg` file and name it with your key name. The
 ```
 very important string
 ```
-
+```
+69420
+```
+```
+12.4.435
+```
