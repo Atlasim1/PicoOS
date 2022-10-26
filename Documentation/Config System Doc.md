@@ -8,9 +8,18 @@ To create a key, Simply Create a `.cfg` file and name it with your key name. The
 ```
 very important string
 ```
-Registry Tree Structure : 
+Or
 ```
-Registry
+69420
+```
+
+Technically, all keys are strings. But, they can be converted to `int` or `bool` using special functions
+
+---
+
+## Registry Tree Structure :
+```
+Registry Root
 ┣ SYSTEM : For system Files
 ┃ ┣ boot : Bootloader Related Config
 ┃ ┣ setup : setup related config
