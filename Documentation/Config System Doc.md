@@ -24,9 +24,9 @@ Registry Root
 ┃ ┣ boot : Bootloader Related Config
 ┃ ┣ setup : setup related config
 ┃ ┗ software : System software related config
-┣ SOFTWARE : Software Related Config
+┣ SOFTWARE : Installed Software Related Config
 ┃ ┗ [softwareNameHere] : Config For Specific Program
 ┣ DEVICE : External Devices Related Config
 ┣ CLASSES : Classes Related Config
-┗ PROGRAMS : Program List, Installers And Uninstallers
+┗ PROGRAMS : Program List, Installer And Uninstaller Locations
 ```
