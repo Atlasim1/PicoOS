@@ -10,4 +10,7 @@ class configshell(cmd.Cmd):
         configdir = os.listdir()
         for config in configdir:
             if ".cfg" in config:
-                keydir.append(config.replace(".cfg",""))
+                keydir.append(config.replace(".cfg","")) 
+        print(*keydir, sep = " \n ")
+        
+    
