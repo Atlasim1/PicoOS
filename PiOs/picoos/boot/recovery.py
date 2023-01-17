@@ -6,9 +6,9 @@ while True:
     SelectedAction = input("Recovery > ")
 
     if SelectedAction == "1":
-      #  import machine
+    #   import machine
         print("Rebooting ...")
-    #    machine.soft_reset()
+    #   machine.soft_reset()
         
     elif SelectedAction == "2":
         print ("Entering BIOS")
