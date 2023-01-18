@@ -4,6 +4,7 @@ import gc
 os.chdir("/") 
 import cmd
 print("Loaded Modules")
+exec(open(open("/picoos/config/SYSTEM/boot/SERVICE_MANAGER_PATH.cfg").read()).read())
 booted = True
 while booted == True:
     print("Please Choose Action : \n 1 : Boot Default OS\n 2 : Boot Custom OS\n 3 : List All Bootfiles\n 4 : More Options")
