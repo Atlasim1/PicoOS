@@ -4,6 +4,19 @@ import gc
 os.chdir("/") 
 import cmd
 print("Loaded Modules")
+
+
+if "ENV_SYS_PROGRAM" in globals():
+    print("*** Cannot Execute NATIVE Mode Program While In PROGRAM Mode ***")
+    sys.exit(1)
+else:
+    print("")
+
+if open("/picoos/config/SYSTEM/boot/AUTOCHK_SCHD.cfg").read() == "True":
+    print("Preparing Disk Repair")
+    exec(open("/picoos/config/SYSTEM/boot/AUTOCHK_PATH.cfg").read())
+
+
 exec(open(open("/picoos/config/SYSTEM/boot/SERVICE_MANAGER_PATH.cfg").read()).read())
 booted = True
 while booted == True:

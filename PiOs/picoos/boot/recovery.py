@@ -1,4 +1,11 @@
 import sys
+
+if "ENV_SYS_PROGRAM" in globals():
+    print("*** Cannot Execute NATIVE Mode Program While In PROGRAM Mode ***")
+    sys.exit(1)
+else:
+    print("")
+
 print("Welcome To Recovery Mode")
 print("Please Choose Action :\n 1 : Reboot\n 2 : Boot Main BIOS\n 3 : Exit To REPL\n 4 : Launch Configuration Editor \n 5 : Launch SystemTools Runner\n 6 : Run Program")
 
