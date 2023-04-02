@@ -9,7 +9,7 @@ Features of PicoOS
 - Built In Shell (not yet)
 - Built In Recovery/installer Program (not yet)
 - Built In Global Config Editor
-
+- Cooperative Multitasking (soon™)
 # Currently Implemented Features 
 - DualBooting Support
 - System Wide Configuration System
