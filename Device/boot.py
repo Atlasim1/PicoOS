@@ -33,8 +33,11 @@ while booted == True:
         CustomOsName = input("Please Enter Operating System Name > ")
         print(f"Booting {CustomOsName}...\n")
         booted = False
-        exec(open(f"/picoos/boot/{CustomOsName}.py").read())
-
+        try:
+            exec(open(f"/picoos/boot/{CustomOsName}.py").read())
+        except OSError:
+            print("Not a valid operating system")
+            
     elif selBootAction == "3":
         dir = os.listdir("/picoos/boot")
         print("\nList Of All Bootfiles\n-------------------------")

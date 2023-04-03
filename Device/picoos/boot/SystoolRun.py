@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, machine
 
 if "ENV_SYS_PROGRAM" in globals():
     print("*** Cannot Execute NATIVE Mode Program While In PROGRAM Mode ***")
@@ -13,8 +13,7 @@ ENV_SYS_PROGRAM = True
 
 print("Welcome to PiOS SystemTools Runner")
 print("Type \"list\" to list all SystemTools")
-print("Type \"recovery\" to open Recovery BootMenu")
-print("Type\"quit\"To Quit Program")
+print("Type \"quit\" To Quit Program And Restart Computer")
 
 os.chdir("/picoos/systools")
 
@@ -29,16 +28,11 @@ while True:
             newsystooldir.append(file.replace(".py",""))  
         print(*newsystooldir, sep = " \n ")
         
-    elif runfile == "recovery":
-        print("Booting Recovery Menu")
-        moreOptionsOs = open("/picoos/config/SYSTEM/boot/DEFAULT_RECOVERY_PATH.cfg").read()
-        exec(open(moreOptionsOs).read())
-        
     elif runfile == "quit":
-        sys.exit()
+        machine.soft_reset()
             
     else:
-        break
+        print(f"Running {runfile}")
+        exec(open(runfile).read())
     
-print(f"Running {runfile}")
-exec(open(runfile).read())
+
