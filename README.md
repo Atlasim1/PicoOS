@@ -1,8 +1,3 @@
-# Developement Notice
-Due to me losing my raspberry pi pico in the depths of my junk drawer, Developement of this project has become slower. I will still continue to support this project and developement will restart once i get a new pico. In the meantime, i have continued to implement some features except they have not been tested and could be completeley broken. I will start debugging features once i get a pico.
-
-EDIT : 5 minutes after writing this statement, i found my device again. I guess I have to review code now.
-
 # PicoOS
  Set of tools for the Raspberry Pi Pico To Do Many Tasks
  
