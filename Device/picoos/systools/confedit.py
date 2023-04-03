@@ -28,26 +28,26 @@ class configshell(cmd.Cmd):
                 keydir.append(config.replace(".cfg","")) 
         print(*keydir, sep = "\n")
         
-    def do_listheaderkeys(self, args):
-        hkeydir = []
-        alldir = os.listdir()
-        for hkey in alldir:
-            if ".cfg" in hkey:
-                print()
-            else:
-                alldir.append(hkey)    
-        print(*hkeydir, sep = "\n")
-    
-    def do_lshk(self, args):
-        hkeydir = []
-        alldir = os.listdir()
-        for hkey in alldir:
-            if ".cfg" in hkey:
-                print()
-            else:
-                alldir.append(hkey)    
-        print(*hkeydir, sep = "\n")
-        
+#    def do_listheaderkeys(self, args):
+#        hkeydir = []
+#        alldir = os.listdir()
+#        for hkey in alldir:
+#            if ".cfg" in hkey:
+#                print()
+#            else:
+#                alldir.append(hkey)    
+#        print(*hkeydir, sep = "\n")
+
+#    def do_lshk(self, args):
+#        hkeydir = []
+#        alldir = os.listdir()
+#        for hkey in alldir:
+#            if ".cfg" in hkey:
+#                print()
+#            else:
+#                alldir.append(hkey)    
+#        print(*hkeydir, sep = "\n")
+#
     def do_ls(self, args):
         alldir = os.listdir()
         print(*alldir, sep = "\n")
@@ -57,7 +57,7 @@ class configshell(cmd.Cmd):
         print(f"Changed Path to {args}")
         
     def do_readkey(self, args):
-        key = open(f"{args}.cfg","r")
+        key = open(f"{args}.cfg","r").read()
         print(f"{args} << {key}")
         
     def do_writekey(self, args):

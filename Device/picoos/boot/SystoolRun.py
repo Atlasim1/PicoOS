@@ -6,6 +6,8 @@ if "ENV_SYS_PROGRAM" in globals():
 else:
     print("")
 
+runfile = None
+
 global ENV_SYS_PROGRAM
 ENV_SYS_PROGRAM = True
 
@@ -17,7 +19,7 @@ print("Type\"quit\"To Quit Program")
 os.chdir("/picoos/systools")
 
 while True:
-    runfile = "Run System Tool > "
+    runfile = input("Run System Tool > ")
     if runfile == "list":
         print("Listing All SystemTools")
         
