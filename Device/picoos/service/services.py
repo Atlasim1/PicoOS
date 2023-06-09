@@ -1,7 +1,9 @@
+import _thread
+
 #Thread And Services Manager
 def servicemessage(message):
     print("A Service on this device is reporting an error")
-    servicemessage_wouldlike = input("Would you like to see this error?\n SERVICES (y / n) >>> ")
+    servicemessage_wouldlike = input("Would you like to see this error?\n SERVICES (y / n) >>> ")  # noqa: E501
     if servicemessage_wouldlike == "y" or servicemessage_wouldlike == "yes":
         print(f"SERVICES : {message}")
         print("Message Receiving Done, You may now use your computer")
@@ -13,7 +15,7 @@ servicelist = []
 servicelist = servicelistraw.split("\n")
 runlistfile = "/picoos/service/runlist"
 
-import _thread
+
 
 def thread2():
     for service in servicelist:
