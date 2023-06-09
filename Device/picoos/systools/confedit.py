@@ -90,8 +90,6 @@ class configshell(cmd.Cmd):
               
                - listkeys : List all keys in current path AKA : lsk
               
-               - listheaderkeys : List all header keys in current path AKA : lshk
-              
                - ls : List all elements in current path
               
                - cd <path> : Change current path
