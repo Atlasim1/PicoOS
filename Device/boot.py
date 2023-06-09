@@ -5,19 +5,36 @@ os.chdir("/")
 import cmd
 print("Loaded Modules")
 
-
-if "ENV_SYS_PROGRAM" in globals():
-    print("*** Cannot Execute NATIVE Mode Program While In PROGRAM Mode ***")
-    sys.exit(1)
-else:
-    print("")
-
 if open("/picoos/config/SYSTEM/boot/AUTOCHK_SCHD.cfg").read() == "True":
     print("Preparing Disk Repair")
     exec(open("/picoos/config/SYSTEM/boot/AUTOCHK_PATH.cfg").read())
 
+#Thread And Services Manager
+def servicemessage(message):
+    print("A Service on this device is reporting an error")
+    servicemessage_wouldlike = input("Would you like to see this error?\n SERVICES (y / n) >>> ")
+    if servicemessage_wouldlike == "y" or servicemessage_wouldlike == "yes":
+        print(f"SERVICES : {message}")
+        print("Message Receiving Done, You may now use your computer")
+    else:
+        print("Message Receiving Canceled, You may now use your computer")
+    
+servicelistraw = open("/picoos/config/SYSTEM/services/BOOT_SERVICES.cfg","r").read()
+servicelist = []
+servicelist = servicelistraw.split("\n")
+runlistfile = "/picoos/service/runlist"
 
-exec(open(open("/picoos/config/SYSTEM/boot/SERVICE_MANAGER_PATH.cfg").read()).read())
+import _thread
+
+def thread2():
+    for service in servicelist:
+        try:
+            exec(open(f"/picoos/service/Services/{service}").read())
+        except Exception as Error:
+            servicemessage(f"ERROR : {Error}")
+_thread.start_new_thread(thread2, ())
+print("Started Services")
+
 booted = True
 while booted == True:
     print("Please Choose Action : \n 1 : Boot Default OS\n 2 : Boot Custom OS\n 3 : List All Bootfiles\n 4 : More Options")
