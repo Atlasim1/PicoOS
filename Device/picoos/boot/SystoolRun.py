@@ -1,15 +1,6 @@
 import os, sys, machine
 
-if "ENV_SYS_PROGRAM" in globals():
-    print("*** Cannot Execute NATIVE Mode Program While In PROGRAM Mode ***")
-    sys.exit(1)
-else:
-    print("")
-
 runfile = None
-
-global ENV_SYS_PROGRAM
-ENV_SYS_PROGRAM = True
 
 print("Welcome to PiOS SystemTools Runner")
 print("Type \"list\" to list all SystemTools")
